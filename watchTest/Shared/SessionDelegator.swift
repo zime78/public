@@ -191,7 +191,7 @@ class SessionDelegator: NSObject, WCSessionDelegate {
     private func postNotificationOnMainQueueAsync(name: NSNotification.Name, object: CommandStatus? = nil) {
         print("noti:\(name.rawValue)")
         DispatchQueue.main.async {
-            NotificationCenter.default.post(name: name, object: object)
+            NotificationCenter.default.post(name: name, object:["message": object?.info?.message])
         }
     }
 }
