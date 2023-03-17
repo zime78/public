@@ -33,8 +33,6 @@ class MessageManager: NSObject {
     
     @objc
     func onTestMessage(msg: String){
-//        var commandStatus = CommandStatus(command: .sendMessage, phrase: .sent)
-//        commandStatus.timedColor = TimedColor(message)
 
         guard WCSession.default.activationState == .activated else {
             return
@@ -45,17 +43,26 @@ class MessageManager: NSObject {
         let timeString = dateFormatter.string(from: Date())
         
         let item: [String: Any] = [PayloadKey.timeStamp: timeString, PayloadKey.message: msg.data(using: .utf8) as Any]
-        
+
+//        var commandStatus = CommandStatus(command: .sendMessage, phrase: .sent)
+//        commandStatus.info = MessageInfo(msg)
         // A reply handler block runs asynchronously on a background thread and should return quickly.
         WCSession.default.sendMessage(item, replyHandler: { replyMessage in
 //            commandStatus.phrase = .replied
-//            commandStatus.timedColor = TimedColor(replyMessage)
-//            self.postNotificationOnMainQueueAsync(name: .dataDidFlow, object: commandStatus)
+//            commandStatus.info = MessageInfo(replyMessage)
+//
+//            DispatchQueue.main.async {
+//                NotificationCenter.default.post(name: .dataDidFlow, object: commandStatus)
+//            }
 
         }, errorHandler: { error in
 //            commandStatus.phrase = .failed
 //            commandStatus.errorMessage = error.localizedDescription
-//            self.postNotificationOnMainQueueAsync(name: .dataDidFlow, object: commandStatus)
+//
+//            DispatchQueue.main.async {
+//                NotificationCenter.default.post(name: .dataDidFlow, object: commandStatus)
+//            }
+            
         })
         
     }

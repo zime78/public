@@ -67,6 +67,18 @@ struct MessageInfo {
         self.init(dictionary)
     }
     
+    //문자만 들어오면 time설정추가함.
+    //
+    init(_ value: String) {
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = .medium
+        let timeString = dateFormatter.string(from: Date())
+        
+        let dictionary = [PayloadKey.timeStamp: timeString as Any, PayloadKey.message: value as Any]
+        self.init(dictionary)
+    }
+    
     // message 전달함.
     //
     func getMessage() -> String{

@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var infoMsg = "3"
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             
-            Text("3")
+            Text(infoMsg)
             
             HStack {
                 Button(action: {
@@ -32,6 +34,21 @@ struct ContentView: View {
             }
             
             
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .dataDidFlow)) { notification in
+            //Nofi 받아 처리 하기
+            if let data = notification.object as? [String: Any] {                
+                if let messageData = data["message"] as? Data {
+                    infoMsg = String(data: messageData, encoding: .utf8) ?? " "
+                }else{
+                    infoMsg = "err message change"
+                }
+            }else {
+                infoMsg = "err object change"
+            }
+                
+
+            print("My event received!")
         }
         .onAppear(){
                 //Session 초기화(연결함)
