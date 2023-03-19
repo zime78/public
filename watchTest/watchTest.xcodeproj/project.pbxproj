@@ -25,6 +25,56 @@
 		2D78699529BA00D800951F2F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D78699429BA00D800951F2F /* Preview Assets.xcassets */; };
 		2D78699B29BA026300951F2F /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D78699A29BA026300951F2F /* WatchConnectivity.framework */; };
 		2D78699D29BA027300951F2F /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D78699C29BA027300951F2F /* WatchConnectivity.framework */; };
+		2DE5933029C71FE000779D07 /* crypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5930A29C71FE000779D07 /* crypt.c */; };
+		2DE5933129C71FE000779D07 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5930B29C71FE000779D07 /* unzip.c */; };
+		2DE5933229C71FE000779D07 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5930C29C71FE000779D07 /* zip.c */; };
+		2DE5933329C71FE000779D07 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5930E29C71FE000779D07 /* ioapi.c */; };
+		2DE5933429C71FE000779D07 /* ioapi_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5931029C71FE000779D07 /* ioapi_buf.c */; };
+		2DE5933529C71FE000779D07 /* ioapi_mem.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5931429C71FE000779D07 /* ioapi_mem.c */; };
+		2DE5933629C71FE000779D07 /* minishared.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5931529C71FE000779D07 /* minishared.c */; };
+		2DE5933729C71FE000779D07 /* aeskey.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5931B29C71FE000779D07 /* aeskey.c */; };
+		2DE5933829C71FE000779D07 /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5931C29C71FE000779D07 /* hmac.c */; };
+		2DE5933929C71FE000779D07 /* aescrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5931F29C71FE000779D07 /* aescrypt.c */; };
+		2DE5933A29C71FE000779D07 /* fileenc.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5932029C71FE000779D07 /* fileenc.c */; };
+		2DE5933B29C71FE000779D07 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5932229C71FE000779D07 /* sha1.c */; };
+		2DE5933C29C71FE000779D07 /* aes_ni.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5932529C71FE000779D07 /* aes_ni.c */; };
+		2DE5933D29C71FE000779D07 /* prng.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5932729C71FE000779D07 /* prng.c */; };
+		2DE5933E29C71FE000779D07 /* pwd2key.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5932929C71FE000779D07 /* pwd2key.c */; };
+		2DE5933F29C71FE000779D07 /* aestab.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5932A29C71FE000779D07 /* aestab.c */; };
+		2DE5934029C71FE000779D07 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5932F29C71FE000779D07 /* SSZipArchive.m */; };
+		2DE5934229C738B300779D07 /* ioapi_mem.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5931429C71FE000779D07 /* ioapi_mem.c */; };
+		2DE5934329C738B300779D07 /* crypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5930A29C71FE000779D07 /* crypt.c */; };
+		2DE5934429C738B300779D07 /* ioapi_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5931029C71FE000779D07 /* ioapi_buf.c */; };
+		2DE5934529C738B300779D07 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5930C29C71FE000779D07 /* zip.c */; };
+		2DE5934629C738B300779D07 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5930B29C71FE000779D07 /* unzip.c */; };
+		2DE5934729C738B300779D07 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5930E29C71FE000779D07 /* ioapi.c */; };
+		2DE5934829C738B300779D07 /* minishared.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5931529C71FE000779D07 /* minishared.c */; };
+		2DE5934929C738D700779D07 /* pwd2key.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5932929C71FE000779D07 /* pwd2key.c */; };
+		2DE5934A29C738D700779D07 /* aes_ni.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5932529C71FE000779D07 /* aes_ni.c */; };
+		2DE5934B29C738D700779D07 /* aeskey.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5931B29C71FE000779D07 /* aeskey.c */; };
+		2DE5934C29C738D700779D07 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5932229C71FE000779D07 /* sha1.c */; };
+		2DE5934D29C738D700779D07 /* prng.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5932729C71FE000779D07 /* prng.c */; };
+		2DE5934E29C738D700779D07 /* fileenc.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5932029C71FE000779D07 /* fileenc.c */; };
+		2DE5934F29C738D700779D07 /* aescrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5931F29C71FE000779D07 /* aescrypt.c */; };
+		2DE5935029C738D700779D07 /* aestab.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5932A29C71FE000779D07 /* aestab.c */; };
+		2DE5935129C738D700779D07 /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5931C29C71FE000779D07 /* hmac.c */; };
+		2DE5935229C738E700779D07 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5932F29C71FE000779D07 /* SSZipArchive.m */; };
+		2DE5935529C7479E00779D07 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5935429C7479E00779D07 /* Utils.m */; };
+		2DE5935A29C74A5000779D07 /* Command.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5935929C74A5000779D07 /* Command.c */; };
+		2DE5935C29C751DD00779D07 /* UiControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5935B29C751DD00779D07 /* UiControll.swift */; };
+		2DE5935D29C751DD00779D07 /* UiControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5935B29C751DD00779D07 /* UiControll.swift */; };
+		2DE5938729C75A0000779D07 /* UIActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5936129C75A0000779D07 /* UIActivityIndicatorView.m */; };
+		2DE5938929C75A0000779D07 /* UIScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5936329C75A0000779D07 /* UIScreen.m */; };
+		2DE5938B29C75A0000779D07 /* UIRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5936629C75A0000779D07 /* UIRefreshControl.m */; };
+		2DE5938D29C75A0000779D07 /* UILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5936A29C75A0000779D07 /* UILabel.m */; };
+		2DE5938F29C75A0000779D07 /* UIApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5936C29C75A0000779D07 /* UIApplication.m */; };
+		2DE5939129C75A0000779D07 /* UIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5936F29C75A0000779D07 /* UIButton.m */; };
+		2DE5939329C75A0000779D07 /* UIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5937229C75A0000779D07 /* UIAlertView.m */; };
+		2DE5939529C75A0000779D07 /* UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5937529C75A0000779D07 /* UIView.m */; };
+		2DE5939729C75A0000779D07 /* UIDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5937929C75A0000779D07 /* UIDevice.m */; };
+		2DE5939929C75A0000779D07 /* UIImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5937B29C75A0000779D07 /* UIImageView.m */; };
+		2DE5939B29C75A0000779D07 /* UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5937F29C75A0000779D07 /* UIViewController.m */; };
+		2DE5939D29C75A0000779D07 /* UIProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5938229C75A0000779D07 /* UIProgressView.m */; };
 		2DF2DBC229BDBA4F0038CED8 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF2DBC129BDBA4F0038CED8 /* Logger.swift */; };
 		2DF2DBC329BDBA540038CED8 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF2DBC129BDBA4F0038CED8 /* Logger.swift */; };
 		2DF2DBC529BDBB700038CED8 /* SessionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF2DBC429BDBB700038CED8 /* SessionDelegator.swift */; };
@@ -78,6 +128,75 @@
 		2D78699429BA00D800951F2F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2D78699A29BA026300951F2F /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS9.1.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
 		2D78699C29BA027300951F2F /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		2DE5930829C71FE000779D07 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
+		2DE5930A29C71FE000779D07 /* crypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = crypt.c; sourceTree = "<group>"; };
+		2DE5930B29C71FE000779D07 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		2DE5930C29C71FE000779D07 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		2DE5930D29C71FE000779D07 /* minishared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = minishared.h; sourceTree = "<group>"; };
+		2DE5930E29C71FE000779D07 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		2DE5930F29C71FE000779D07 /* ioapi_mem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi_mem.h; sourceTree = "<group>"; };
+		2DE5931029C71FE000779D07 /* ioapi_buf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi_buf.c; sourceTree = "<group>"; };
+		2DE5931129C71FE000779D07 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		2DE5931229C71FE000779D07 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		2DE5931329C71FE000779D07 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		2DE5931429C71FE000779D07 /* ioapi_mem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi_mem.c; sourceTree = "<group>"; };
+		2DE5931529C71FE000779D07 /* minishared.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = minishared.c; sourceTree = "<group>"; };
+		2DE5931629C71FE000779D07 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		2DE5931729C71FE000779D07 /* ioapi_buf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi_buf.h; sourceTree = "<group>"; };
+		2DE5931929C71FE000779D07 /* prng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prng.h; sourceTree = "<group>"; };
+		2DE5931A29C71FE000779D07 /* aes_ni.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes_ni.h; sourceTree = "<group>"; };
+		2DE5931B29C71FE000779D07 /* aeskey.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aeskey.c; sourceTree = "<group>"; };
+		2DE5931C29C71FE000779D07 /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hmac.c; sourceTree = "<group>"; };
+		2DE5931D29C71FE000779D07 /* aestab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aestab.h; sourceTree = "<group>"; };
+		2DE5931E29C71FE000779D07 /* pwd2key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pwd2key.h; sourceTree = "<group>"; };
+		2DE5931F29C71FE000779D07 /* aescrypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aescrypt.c; sourceTree = "<group>"; };
+		2DE5932029C71FE000779D07 /* fileenc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fileenc.c; sourceTree = "<group>"; };
+		2DE5932129C71FE000779D07 /* aesopt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aesopt.h; sourceTree = "<group>"; };
+		2DE5932229C71FE000779D07 /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1.c; sourceTree = "<group>"; };
+		2DE5932329C71FE000779D07 /* brg_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brg_types.h; sourceTree = "<group>"; };
+		2DE5932429C71FE000779D07 /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		2DE5932529C71FE000779D07 /* aes_ni.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aes_ni.c; sourceTree = "<group>"; };
+		2DE5932629C71FE000779D07 /* brg_endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brg_endian.h; sourceTree = "<group>"; };
+		2DE5932729C71FE000779D07 /* prng.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = prng.c; sourceTree = "<group>"; };
+		2DE5932829C71FE000779D07 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
+		2DE5932929C71FE000779D07 /* pwd2key.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pwd2key.c; sourceTree = "<group>"; };
+		2DE5932A29C71FE000779D07 /* aestab.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aestab.c; sourceTree = "<group>"; };
+		2DE5932B29C71FE000779D07 /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
+		2DE5932C29C71FE000779D07 /* fileenc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fileenc.h; sourceTree = "<group>"; };
+		2DE5932D29C71FE000779D07 /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
+		2DE5932E29C71FE000779D07 /* SSZipCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipCommon.h; sourceTree = "<group>"; };
+		2DE5932F29C71FE000779D07 /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
+		2DE5935329C7479E00779D07 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		2DE5935429C7479E00779D07 /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		2DE5935829C74A5000779D07 /* Command.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Command.h; sourceTree = "<group>"; };
+		2DE5935929C74A5000779D07 /* Command.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Command.c; sourceTree = "<group>"; };
+		2DE5935B29C751DD00779D07 /* UiControll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiControll.swift; sourceTree = "<group>"; };
+		2DE5936029C75A0000779D07 /* UIActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIActivityIndicatorView.h; sourceTree = "<group>"; };
+		2DE5936129C75A0000779D07 /* UIActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIActivityIndicatorView.m; sourceTree = "<group>"; };
+		2DE5936329C75A0000779D07 /* UIScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIScreen.m; sourceTree = "<group>"; };
+		2DE5936429C75A0000779D07 /* UIScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIScreen.h; sourceTree = "<group>"; };
+		2DE5936629C75A0000779D07 /* UIRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIRefreshControl.m; sourceTree = "<group>"; };
+		2DE5936729C75A0000779D07 /* UIRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIRefreshControl.h; sourceTree = "<group>"; };
+		2DE5936929C75A0000779D07 /* UILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILabel.h; sourceTree = "<group>"; };
+		2DE5936A29C75A0000779D07 /* UILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILabel.m; sourceTree = "<group>"; };
+		2DE5936C29C75A0000779D07 /* UIApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIApplication.m; sourceTree = "<group>"; };
+		2DE5936D29C75A0000779D07 /* UIApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIApplication.h; sourceTree = "<group>"; };
+		2DE5936F29C75A0000779D07 /* UIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButton.m; sourceTree = "<group>"; };
+		2DE5937029C75A0000779D07 /* UIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButton.h; sourceTree = "<group>"; };
+		2DE5937229C75A0000779D07 /* UIAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertView.m; sourceTree = "<group>"; };
+		2DE5937329C75A0000779D07 /* UIAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAlertView.h; sourceTree = "<group>"; };
+		2DE5937529C75A0000779D07 /* UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIView.m; sourceTree = "<group>"; };
+		2DE5937629C75A0000779D07 /* UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIView.h; sourceTree = "<group>"; };
+		2DE5937829C75A0000779D07 /* UIDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDevice.h; sourceTree = "<group>"; };
+		2DE5937929C75A0000779D07 /* UIDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDevice.m; sourceTree = "<group>"; };
+		2DE5937B29C75A0000779D07 /* UIImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageView.m; sourceTree = "<group>"; };
+		2DE5937C29C75A0000779D07 /* UIImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageView.h; sourceTree = "<group>"; };
+		2DE5937E29C75A0000779D07 /* UIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewController.h; sourceTree = "<group>"; };
+		2DE5937F29C75A0000779D07 /* UIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewController.m; sourceTree = "<group>"; };
+		2DE5938129C75A0000779D07 /* UIProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIProgressView.h; sourceTree = "<group>"; };
+		2DE5938229C75A0000779D07 /* UIProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIProgressView.m; sourceTree = "<group>"; };
+		2DE5938329C75A0000779D07 /* PhoneSouceHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneSouceHeader.h; sourceTree = "<group>"; };
+		2DE5938529C75A0000779D07 /* UIControlState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIControlState.h; sourceTree = "<group>"; };
 		2DF2DBBE29BDB53B0038CED8 /* watchos Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "watchos Watch App.entitlements"; sourceTree = "<group>"; };
 		2DF2DBBF29BDB5710038CED8 /* watchTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = watchTest.entitlements; sourceTree = "<group>"; };
 		2DF2DBC129BDBA4F0038CED8 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -152,6 +271,7 @@
 		2D78698C29BA00D700951F2F /* watchos Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				2DE5935E29C75A0000779D07 /* PhoneSource */,
 				2DF2DBCE29BDEB6D0038CED8 /* ObjectC */,
 				2DF2DBD429BDED6E0038CED8 /* watchos-Watch-App-Info.plist */,
 				2DF2DBCF29BDEBB50038CED8 /* watchos Watch App-Bridging-Header.h */,
@@ -181,13 +301,221 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2DE5930729C71FE000779D07 /* ZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				2DE5930929C71FE000779D07 /* minizip */,
+				2DE5932D29C71FE000779D07 /* SSZipArchive.h */,
+				2DE5932F29C71FE000779D07 /* SSZipArchive.m */,
+				2DE5932E29C71FE000779D07 /* SSZipCommon.h */,
+				2DE5930829C71FE000779D07 /* ZipArchive.h */,
+			);
+			path = ZipArchive;
+			sourceTree = "<group>";
+		};
+		2DE5930929C71FE000779D07 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				2DE5931829C71FE000779D07 /* aes */,
+				2DE5930A29C71FE000779D07 /* crypt.c */,
+				2DE5931129C71FE000779D07 /* crypt.h */,
+				2DE5931029C71FE000779D07 /* ioapi_buf.c */,
+				2DE5931729C71FE000779D07 /* ioapi_buf.h */,
+				2DE5931429C71FE000779D07 /* ioapi_mem.c */,
+				2DE5930F29C71FE000779D07 /* ioapi_mem.h */,
+				2DE5930E29C71FE000779D07 /* ioapi.c */,
+				2DE5931629C71FE000779D07 /* ioapi.h */,
+				2DE5931529C71FE000779D07 /* minishared.c */,
+				2DE5930D29C71FE000779D07 /* minishared.h */,
+				2DE5930B29C71FE000779D07 /* unzip.c */,
+				2DE5931329C71FE000779D07 /* unzip.h */,
+				2DE5930C29C71FE000779D07 /* zip.c */,
+				2DE5931229C71FE000779D07 /* zip.h */,
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
+		2DE5931829C71FE000779D07 /* aes */ = {
+			isa = PBXGroup;
+			children = (
+				2DE5931929C71FE000779D07 /* prng.h */,
+				2DE5931A29C71FE000779D07 /* aes_ni.h */,
+				2DE5931B29C71FE000779D07 /* aeskey.c */,
+				2DE5931C29C71FE000779D07 /* hmac.c */,
+				2DE5931D29C71FE000779D07 /* aestab.h */,
+				2DE5931E29C71FE000779D07 /* pwd2key.h */,
+				2DE5931F29C71FE000779D07 /* aescrypt.c */,
+				2DE5932029C71FE000779D07 /* fileenc.c */,
+				2DE5932129C71FE000779D07 /* aesopt.h */,
+				2DE5932229C71FE000779D07 /* sha1.c */,
+				2DE5932329C71FE000779D07 /* brg_types.h */,
+				2DE5932429C71FE000779D07 /* hmac.h */,
+				2DE5932529C71FE000779D07 /* aes_ni.c */,
+				2DE5932629C71FE000779D07 /* brg_endian.h */,
+				2DE5932729C71FE000779D07 /* prng.c */,
+				2DE5932829C71FE000779D07 /* aes.h */,
+				2DE5932929C71FE000779D07 /* pwd2key.c */,
+				2DE5932A29C71FE000779D07 /* aestab.c */,
+				2DE5932B29C71FE000779D07 /* sha1.h */,
+				2DE5932C29C71FE000779D07 /* fileenc.h */,
+			);
+			path = aes;
+			sourceTree = "<group>";
+		};
+		2DE5934129C7387F00779D07 /* ObjectC */ = {
+			isa = PBXGroup;
+			children = (
+				2DE5930729C71FE000779D07 /* ZipArchive */,
+			);
+			path = ObjectC;
+			sourceTree = "<group>";
+		};
+		2DE5935E29C75A0000779D07 /* PhoneSource */ = {
+			isa = PBXGroup;
+			children = (
+				2DE5935F29C75A0000779D07 /* UIActivityIndicatorView */,
+				2DE5936229C75A0000779D07 /* UIScreen */,
+				2DE5936529C75A0000779D07 /* UIRefreshControl */,
+				2DE5936829C75A0000779D07 /* UILabel */,
+				2DE5936B29C75A0000779D07 /* UIApplication */,
+				2DE5936E29C75A0000779D07 /* UIButton */,
+				2DE5937129C75A0000779D07 /* UIAlertView */,
+				2DE5937429C75A0000779D07 /* UIView */,
+				2DE5937729C75A0000779D07 /* UIDevice */,
+				2DE5937A29C75A0000779D07 /* UIImageView */,
+				2DE5937D29C75A0000779D07 /* UIViewController */,
+				2DE5938029C75A0000779D07 /* UIProgressView */,
+				2DE5938329C75A0000779D07 /* PhoneSouceHeader.h */,
+				2DE5938429C75A0000779D07 /* base */,
+			);
+			path = PhoneSource;
+			sourceTree = "<group>";
+		};
+		2DE5935F29C75A0000779D07 /* UIActivityIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				2DE5936029C75A0000779D07 /* UIActivityIndicatorView.h */,
+				2DE5936129C75A0000779D07 /* UIActivityIndicatorView.m */,
+			);
+			path = UIActivityIndicatorView;
+			sourceTree = "<group>";
+		};
+		2DE5936229C75A0000779D07 /* UIScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2DE5936329C75A0000779D07 /* UIScreen.m */,
+				2DE5936429C75A0000779D07 /* UIScreen.h */,
+			);
+			path = UIScreen;
+			sourceTree = "<group>";
+		};
+		2DE5936529C75A0000779D07 /* UIRefreshControl */ = {
+			isa = PBXGroup;
+			children = (
+				2DE5936629C75A0000779D07 /* UIRefreshControl.m */,
+				2DE5936729C75A0000779D07 /* UIRefreshControl.h */,
+			);
+			path = UIRefreshControl;
+			sourceTree = "<group>";
+		};
+		2DE5936829C75A0000779D07 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				2DE5936929C75A0000779D07 /* UILabel.h */,
+				2DE5936A29C75A0000779D07 /* UILabel.m */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		2DE5936B29C75A0000779D07 /* UIApplication */ = {
+			isa = PBXGroup;
+			children = (
+				2DE5936C29C75A0000779D07 /* UIApplication.m */,
+				2DE5936D29C75A0000779D07 /* UIApplication.h */,
+			);
+			path = UIApplication;
+			sourceTree = "<group>";
+		};
+		2DE5936E29C75A0000779D07 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				2DE5936F29C75A0000779D07 /* UIButton.m */,
+				2DE5937029C75A0000779D07 /* UIButton.h */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		2DE5937129C75A0000779D07 /* UIAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				2DE5937229C75A0000779D07 /* UIAlertView.m */,
+				2DE5937329C75A0000779D07 /* UIAlertView.h */,
+			);
+			path = UIAlertView;
+			sourceTree = "<group>";
+		};
+		2DE5937429C75A0000779D07 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				2DE5937529C75A0000779D07 /* UIView.m */,
+				2DE5937629C75A0000779D07 /* UIView.h */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		2DE5937729C75A0000779D07 /* UIDevice */ = {
+			isa = PBXGroup;
+			children = (
+				2DE5937829C75A0000779D07 /* UIDevice.h */,
+				2DE5937929C75A0000779D07 /* UIDevice.m */,
+			);
+			path = UIDevice;
+			sourceTree = "<group>";
+		};
+		2DE5937A29C75A0000779D07 /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				2DE5937B29C75A0000779D07 /* UIImageView.m */,
+				2DE5937C29C75A0000779D07 /* UIImageView.h */,
+			);
+			path = UIImageView;
+			sourceTree = "<group>";
+		};
+		2DE5937D29C75A0000779D07 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2DE5937E29C75A0000779D07 /* UIViewController.h */,
+				2DE5937F29C75A0000779D07 /* UIViewController.m */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		2DE5938029C75A0000779D07 /* UIProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				2DE5938129C75A0000779D07 /* UIProgressView.h */,
+				2DE5938229C75A0000779D07 /* UIProgressView.m */,
+			);
+			path = UIProgressView;
+			sourceTree = "<group>";
+		};
+		2DE5938429C75A0000779D07 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				2DE5938529C75A0000779D07 /* UIControlState.h */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
 		2DF2DBC029BDBA4F0038CED8 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				2DE5934129C7387F00779D07 /* ObjectC */,
 				2DF2DBC129BDBA4F0038CED8 /* Logger.swift */,
 				2D02AB8E29BF327C00D8DFFD /* CommandStatus.swift */,
 				2DF2DBC429BDBB700038CED8 /* SessionDelegator.swift */,
 				2D47550529C1F4D700CD641E /* MessageManager.swift */,
+				2DE5935B29C751DD00779D07 /* UiControll.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -197,6 +525,10 @@
 			children = (
 				2DF2DBD029BDEBB60038CED8 /* ObjectInterface.h */,
 				2DF2DBD129BDEC1B0038CED8 /* ObjectInterface.m */,
+				2DE5935329C7479E00779D07 /* Utils.h */,
+				2DE5935429C7479E00779D07 /* Utils.m */,
+				2DE5935829C74A5000779D07 /* Command.h */,
+				2DE5935929C74A5000779D07 /* Command.c */,
 			);
 			name = ObjectC;
 			path = "watchos Watch App/ObjectC";
@@ -306,14 +638,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DE5935C29C751DD00779D07 /* UiControll.swift in Sources */,
+				2DE5935129C738D700779D07 /* hmac.c in Sources */,
+				2DE5935229C738E700779D07 /* SSZipArchive.m in Sources */,
+				2DE5934929C738D700779D07 /* pwd2key.c in Sources */,
+				2DE5934429C738B300779D07 /* ioapi_buf.c in Sources */,
+				2DE5934229C738B300779D07 /* ioapi_mem.c in Sources */,
 				2DF2DBC229BDBA4F0038CED8 /* Logger.swift in Sources */,
+				2DE5934F29C738D700779D07 /* aescrypt.c in Sources */,
 				2D4C768D29B9FA93007560B7 /* ViewController.m in Sources */,
+				2DE5934829C738B300779D07 /* minishared.c in Sources */,
+				2DE5934629C738B300779D07 /* unzip.c in Sources */,
 				2DF2DBC529BDBB700038CED8 /* SessionDelegator.swift in Sources */,
+				2DE5934729C738B300779D07 /* ioapi.c in Sources */,
+				2DE5934329C738B300779D07 /* crypt.c in Sources */,
+				2DE5934D29C738D700779D07 /* prng.c in Sources */,
 				2D4C768729B9FA93007560B7 /* AppDelegate.m in Sources */,
+				2DE5934E29C738D700779D07 /* fileenc.c in Sources */,
 				2D02AB8F29BF327C00D8DFFD /* CommandStatus.swift in Sources */,
+				2DE5934C29C738D700779D07 /* sha1.c in Sources */,
 				2D4C769829B9FA97007560B7 /* main.m in Sources */,
+				2DE5934529C738B300779D07 /* zip.c in Sources */,
 				2D47550629C1F4D700CD641E /* MessageManager.swift in Sources */,
+				2DE5934B29C738D700779D07 /* aeskey.c in Sources */,
 				2D4C768A29B9FA93007560B7 /* SceneDelegate.m in Sources */,
+				2DE5935029C738D700779D07 /* aestab.c in Sources */,
+				2DE5934A29C738D700779D07 /* aes_ni.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,12 +671,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DE5933C29C71FE000779D07 /* aes_ni.c in Sources */,
+				2DE5933829C71FE000779D07 /* hmac.c in Sources */,
+				2DE5933129C71FE000779D07 /* unzip.c in Sources */,
+				2DE5938729C75A0000779D07 /* UIActivityIndicatorView.m in Sources */,
+				2DE5939529C75A0000779D07 /* UIView.m in Sources */,
+				2DE5933629C71FE000779D07 /* minishared.c in Sources */,
 				2DF2DBD329BDEC1B0038CED8 /* ObjectInterface.m in Sources */,
+				2DE5939929C75A0000779D07 /* UIImageView.m in Sources */,
+				2DE5938D29C75A0000779D07 /* UILabel.m in Sources */,
 				2D02AB9029BF327C00D8DFFD /* CommandStatus.swift in Sources */,
+				2DE5933529C71FE000779D07 /* ioapi_mem.c in Sources */,
+				2DE5939D29C75A0000779D07 /* UIProgressView.m in Sources */,
+				2DE5935529C7479E00779D07 /* Utils.m in Sources */,
+				2DE5935D29C751DD00779D07 /* UiControll.swift in Sources */,
+				2DE5933229C71FE000779D07 /* zip.c in Sources */,
+				2DE5933029C71FE000779D07 /* crypt.c in Sources */,
+				2DE5939329C75A0000779D07 /* UIAlertView.m in Sources */,
+				2DE5938929C75A0000779D07 /* UIScreen.m in Sources */,
+				2DE5933929C71FE000779D07 /* aescrypt.c in Sources */,
 				2D47550729C1F4D700CD641E /* MessageManager.swift in Sources */,
+				2DE5933429C71FE000779D07 /* ioapi_buf.c in Sources */,
+				2DE5935A29C74A5000779D07 /* Command.c in Sources */,
+				2DE5933E29C71FE000779D07 /* pwd2key.c in Sources */,
+				2DE5939B29C75A0000779D07 /* UIViewController.m in Sources */,
+				2DE5933D29C71FE000779D07 /* prng.c in Sources */,
+				2DE5933729C71FE000779D07 /* aeskey.c in Sources */,
+				2DE5933B29C71FE000779D07 /* sha1.c in Sources */,
+				2DE5933A29C71FE000779D07 /* fileenc.c in Sources */,
 				2DF2DBC629BDBB700038CED8 /* SessionDelegator.swift in Sources */,
 				2D78699029BA00D700951F2F /* ContentView.swift in Sources */,
+				2DE5933329C71FE000779D07 /* ioapi.c in Sources */,
+				2DE5934029C71FE000779D07 /* SSZipArchive.m in Sources */,
 				2DF2DBC329BDBA540038CED8 /* Logger.swift in Sources */,
+				2DE5938F29C75A0000779D07 /* UIApplication.m in Sources */,
+				2DE5939729C75A0000779D07 /* UIDevice.m in Sources */,
+				2DE5938B29C75A0000779D07 /* UIRefreshControl.m in Sources */,
+				2DE5939129C75A0000779D07 /* UIButton.m in Sources */,
+				2DE5933F29C71FE000779D07 /* aestab.c in Sources */,
 				2D78698E29BA00D700951F2F /* watchosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

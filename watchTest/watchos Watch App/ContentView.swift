@@ -20,19 +20,28 @@ struct ContentView: View {
             
             HStack {
                 Button(action: {
-                        ExpansionObj.testLog("test log1")
+                        ExpansionObj.testLog("압축버튼 클릭")
+                        ExpansionObj.onTestZip()
                       }, label: {
-                          Text("data send")
+                          Text("압축")
                       })
 
                 Button(action: {
+                        ExpansionObj.testLog("메시지 전송클릭")
                         //phone와watch 같이 사용하는 함수 이용해서 메시지 전달함
-                        MessageManager.shared.onTestMessage(msg: "watch test message")
+                        ExpansionObj.testMessage("object-c로 메시지보내기")
                       }, label: {
-                          Text("message send")
+                          Text("메시지 보내기")
                       })
             }
             
+            Button(action: {
+                    ExpansionObj.testLog("swift 메시지 전송클릭")
+                    //phone와watch 같이 사용하는 함수 이용해서 메시지 전달함
+                    MessageManager.shared.onTestMessage(msg: "watch test swift message")
+                  }, label: {
+                      Text("swift로 메시지보내기")
+                  })
             
         }
         .onReceive(NotificationCenter.default.publisher(for: .dataDidFlow)) { notification in

@@ -28,7 +28,14 @@ class MessageManager: NSObject {
     
     @objc
     func load() {
-        
+#if os(watchOS)
+        //watch
+        ExpansionObj.testLog("[watch] MessageManager load()")
+#else
+        //phone
+        onTestMessage(msg: "[phone] MessageManager load()")
+#endif
+       
     }
     
     @objc
