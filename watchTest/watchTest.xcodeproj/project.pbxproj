@@ -271,7 +271,6 @@
 		2D78698C29BA00D700951F2F /* watchos Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				2DE5935E29C75A0000779D07 /* PhoneSource */,
 				2DF2DBCE29BDEB6D0038CED8 /* ObjectC */,
 				2DF2DBD429BDED6E0038CED8 /* watchos-Watch-App-Info.plist */,
 				2DF2DBCF29BDEBB50038CED8 /* watchos Watch App-Bridging-Header.h */,
@@ -370,7 +369,7 @@
 			path = ObjectC;
 			sourceTree = "<group>";
 		};
-		2DE5935E29C75A0000779D07 /* PhoneSource */ = {
+		2DE5935E29C75A0000779D07 /* expansion */ = {
 			isa = PBXGroup;
 			children = (
 				2DE5935F29C75A0000779D07 /* UIActivityIndicatorView */,
@@ -388,7 +387,7 @@
 				2DE5938329C75A0000779D07 /* PhoneSouceHeader.h */,
 				2DE5938429C75A0000779D07 /* base */,
 			);
-			path = PhoneSource;
+			path = expansion;
 			sourceTree = "<group>";
 		};
 		2DE5935F29C75A0000779D07 /* UIActivityIndicatorView */ = {
@@ -523,6 +522,7 @@
 		2DF2DBCE29BDEB6D0038CED8 /* ObjectC */ = {
 			isa = PBXGroup;
 			children = (
+				2DE5935E29C75A0000779D07 /* expansion */,
 				2DF2DBD029BDEBB60038CED8 /* ObjectInterface.h */,
 				2DF2DBD129BDEC1B0038CED8 /* ObjectInterface.m */,
 				2DE5935329C7479E00779D07 /* Utils.h */,
