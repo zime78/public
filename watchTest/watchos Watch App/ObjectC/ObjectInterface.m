@@ -13,6 +13,7 @@
 #if TARGET_OS_IOS
 #import <UIKit/UIKit.h>
 #endif
+#import "UIView.h"
 
 #import "watchos_Watch_App-Swift.h"
 
@@ -33,6 +34,8 @@
     commandLog();
     [Utils onLog];
     
+    //실제 동작은 안되는 뷰 호출함(컴파일 오류를 막기위해서 사용.
+    UIView *testView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
 }
 
 +(void)onTestZip
