@@ -27,11 +27,38 @@ extension Notification.Name {
 //
 class SessionDelegator: NSObject, WCSessionDelegate {
     
+    // MARK: -
+    // MARK: Managing Session Activation
+    // MARK: -
     // Monitor WCSession activation state changes.
     //
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         postNotificationOnMainQueueAsync(name: .activationDidComplete)
     }
+    
+    // WCSessionDelegate methods for iOS only.
+    //
+    #if os(iOS)
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        print("\(#function): activationState = \(session.activationState.rawValue)")
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        // Activate the new session after having switched to a new watch.
+        session.activate()
+    }
+    #endif
+    
+    
+        
+    // MARK: -
+    // MARK: Managing State Changes
+    // MARK: -
+    #if os(iOS)
+    func sessionWatchStateDidChange(_ session: WCSession) {
+        print("\(#function): activationState = \(session.activationState.rawValue)")
+    }
+    #endif
     
     // Monitor WCSession reachability state changes.
     //
@@ -39,6 +66,23 @@ class SessionDelegator: NSObject, WCSessionDelegate {
         postNotificationOnMainQueueAsync(name: .reachabilityDidChange)
     }
     
+    //Indicates a change to the companion app’s installed state.
+    //
+    #if os(watchOS)
+    func sessionCompanionAppInstalledDidChange(_ session: WCSession){
+        if session.isCompanionAppInstalled {
+            print("iOS app 설치 되었습니다.")
+        } else {
+            print("iOS app 설치되지 않았습니다.")
+        }
+    }
+    #endif
+    
+    
+
+    // MARK: -
+    // MARK: Receiving Context Data
+    // MARK: -
     // Did receive an app context.
     //
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String: Any]) {
@@ -47,6 +91,11 @@ class SessionDelegator: NSObject, WCSessionDelegate {
         postNotificationOnMainQueueAsync(name: .dataDidFlow, object: commandStatus)
     }
     
+    
+
+    // MARK: -
+    // MARK: Receiving Immediate Messages
+    // MARK: -
     // Did receive a message, and the peer doesn't need a response.
     //
     func session(_ session: WCSession, didReceiveMessage message: [String: Any]) {
@@ -60,14 +109,12 @@ class SessionDelegator: NSObject, WCSessionDelegate {
         //TODO: 옵셔널 풀어야됨.
         print("Received message: \(String(describing: commandStatus.info?.getMessage())) ::(\(String(describing: commandStatus.info?.getTimeStamp())))")
         
-        
         // 응답 메시지 작성
 //        let replyMessage = ["replyKey": "Message received"]
         
         // 응답 핸들러 호출
 //        replyHandler(replyMessage)
     }
-    
     // Did receive a message, and the peer needs a response.
     //
     func session(_ session: WCSession, didReceiveMessage message: [String: Any], replyHandler: @escaping ([String: Any]) -> Void) {
@@ -89,7 +136,12 @@ class SessionDelegator: NSObject, WCSessionDelegate {
         self.session(session, didReceiveMessageData: messageData)
         replyHandler(messageData) // Echo back the time stamp.
     }
+
     
+    
+    // MARK: -
+    // MARK: Managing Data Dictionary Transfers
+    // MARK: -
     // Did receive a piece of userInfo.
     //
     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any] = [:]) {
@@ -115,7 +167,6 @@ class SessionDelegator: NSObject, WCSessionDelegate {
         }
         postNotificationOnMainQueueAsync(name: .dataDidFlow, object: commandStatus)
     }
-    
     // Did finish sending a piece of userInfo.
     //
     func session(_ session: WCSession, didFinish userInfoTransfer: WCSessionUserInfoTransfer, error: Error?) {
@@ -134,6 +185,11 @@ class SessionDelegator: NSObject, WCSessionDelegate {
         postNotificationOnMainQueueAsync(name: .dataDidFlow, object: commandStatus)
     }
     
+    
+    
+    // MARK: -
+    // MARK: Managing File Transfers
+    // MARK: -
     // Did receive a file.
     //
     func session(_ session: WCSession, didReceive file: WCSessionFile) {
@@ -149,7 +205,6 @@ class SessionDelegator: NSObject, WCSessionDelegate {
             NotificationCenter.default.post(name: .dataDidFlow, object: commandStatus)
         }
     }
-    
     // Did finish a file transfer.
     //
     func session(_ session: WCSession, didFinish fileTransfer: WCSessionFileTransfer, error: Error?) {
@@ -169,23 +224,11 @@ class SessionDelegator: NSObject, WCSessionDelegate {
         postNotificationOnMainQueueAsync(name: .dataDidFlow, object: commandStatus)
     }
     
-    // WCSessionDelegate methods for iOS only.
-    //
-    #if os(iOS)
-    func sessionDidBecomeInactive(_ session: WCSession) {
-        print("\(#function): activationState = \(session.activationState.rawValue)")
-    }
-    
-    func sessionDidDeactivate(_ session: WCSession) {
-        // Activate the new session after having switched to a new watch.
-        session.activate()
-    }
-    
-    func sessionWatchStateDidChange(_ session: WCSession) {
-        print("\(#function): activationState = \(session.activationState.rawValue)")
-    }
-    #endif
-    
+
+
+    // MARK: -
+    // MARK: Noti
+    // MARK: -
     // Post a notification on the main thread asynchronously.
     //
     private func postNotificationOnMainQueueAsync(name: NSNotification.Name, object: CommandStatus? = nil) {
@@ -194,4 +237,5 @@ class SessionDelegator: NSObject, WCSessionDelegate {
             NotificationCenter.default.post(name: name, object:["message": object?.info?.message])
         }
     }
+    
 }
