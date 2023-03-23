@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(void)testLog:(NSString *)log;
 +(void)onTestZip;
++(void)onCompressLogZip:(NSString *) filename;
 +(void)testMessage:(NSString *)msg;
 
 @end

@@ -94,7 +94,6 @@ class Logger: NSObject {
     // Use this dispatch queue to make the log file access thread-safe.
     // Public methods use performBlockAndWait to access the resource; private methods don't.
     //
-    @objc
     private lazy var ioQueue: DispatchQueue = {
         return DispatchQueue(label: "ioQueue")
     }()

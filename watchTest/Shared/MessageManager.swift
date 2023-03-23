@@ -12,6 +12,8 @@ import WatchConnectivity
 @objc
 class MessageManager: NSObject {
     
+    private let fileTransferObservers = FileTransferObservers()
+    
     @objc public static let shared = MessageManager()
     
     private var sessionDelegator: SessionDelegator = {
@@ -50,28 +52,27 @@ class MessageManager: NSObject {
         let timeString = dateFormatter.string(from: Date())
         
         let item: [String: Any] = [PayloadKey.timeStamp: timeString, PayloadKey.message: msg.data(using: .utf8) as Any]
-
-//        var commandStatus = CommandStatus(command: .sendMessage, phrase: .sent)
-//        commandStatus.info = MessageInfo(msg)
-        // A reply handler block runs asynchronously on a background thread and should return quickly.
         WCSession.default.sendMessage(item, replyHandler: { replyMessage in
-//            commandStatus.phrase = .replied
-//            commandStatus.info = MessageInfo(replyMessage)
-//
-//            DispatchQueue.main.async {
-//                NotificationCenter.default.post(name: .dataDidFlow, object: commandStatus)
-//            }
-
+            //성공처리
         }, errorHandler: { error in
-//            commandStatus.phrase = .failed
-//            commandStatus.errorMessage = error.localizedDescription
-//
-//            DispatchQueue.main.async {
-//                NotificationCenter.default.post(name: .dataDidFlow, object: commandStatus)
-//            }
-            
+            //실패처리
         })
+    }
+    
+    @objc
+    func onTestInfoTranser(msg: String){
         
+        guard WCSession.default.activationState == .activated else {
+            return
+        }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = .medium
+        let timeString = dateFormatter.string(from: Date())
+        
+        let item: [String: Any] = [PayloadKey.timeStamp: timeString, PayloadKey.message: msg.data(using: .utf8) as Any]
+        var commandStatus = CommandStatus(command: .transferUserInfo, phrase: .sent)
+        commandStatus.userInfoTranser = WCSession.default.transferUserInfo(item)
     }
 }
 

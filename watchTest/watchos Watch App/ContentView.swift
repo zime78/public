@@ -12,37 +12,48 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            
-            Text(infoMsg)
-            
             HStack {
-                Button(action: {
-                        ExpansionObj.testLog("압축버튼 클릭")
-                        ExpansionObj.onTestZip()
-                      }, label: {
-                          Text("압축")
-                      })
-
-                Button(action: {
-                        ExpansionObj.testLog("메시지 전송클릭")
-                        //phone와watch 같이 사용하는 함수 이용해서 메시지 전달함
-                        ExpansionObj.testMessage("object-c로 메시지보내기")
-                      }, label: {
-                          Text("메시지 보내기")
-                      })
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundColor(.accentColor)
+                
+                Text(infoMsg)
             }
             
-            Button(action: {
+            ScrollView {
+                Button(action: {
+                    ExpansionObj.testLog("압축버튼 클릭")
+                    ExpansionObj.onTestZip()
+                }, label: {
+                    Text("압축")
+                })
+                
+                Button(action: {
+                    ExpansionObj.testLog("메시지 전송클릭")
+                    //phone와watch 같이 사용하는 함수 이용해서 메시지 전달함
+                    ExpansionObj.testMessage("object-c로 메시지보내기")
+                }, label: {
+                    Text("메시지 보내기")
+                })
+                
+                Button(action: {
                     ExpansionObj.testLog("swift 메시지 전송클릭")
                     //phone와watch 같이 사용하는 함수 이용해서 메시지 전달함
                     MessageManager.shared.onTestMessage(msg: "watch test swift message")
-                  }, label: {
-                      Text("swift로 메시지보내기")
-                  })
-            
+                }, label: {
+                    Text("swift로 메시지보내기")
+                })
+                
+                Button(action: {
+                    ExpansionObj.testLog("swift File보냄.")
+                    //phone와watch 같이 사용하는 함수 이용해서 메시지 전달함
+                    FileTransferManager.shared.onTest()
+                    
+                }, label: {
+                    Text("swift로 File보내기")
+                })
+            }.background(Color.orange)
+                        
         }
         .onReceive(NotificationCenter.default.publisher(for: .dataDidFlow)) { notification in
             //Nofi 받아 처리 하기

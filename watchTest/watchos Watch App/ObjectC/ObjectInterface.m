@@ -40,28 +40,28 @@
 
 +(void)onTestZip
 {
+    [self onCompressLogZip:@"logFiles.zip"];
+}
+
++(void)onCompressLogZip:(NSString *) filename
+{
     @try {
         //압축파일 저장할 위치
         NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString* documentDirectory = [paths objectAtIndex:0];
-        NSString *strPathName = [documentDirectory stringByAppendingPathComponent:@"logFiles.zip"];
+        NSString *strPathName = [documentDirectory stringByAppendingPathComponent:filename];
         
         //파일이 존재하면 삭제함.
         if ([NSFileManager.defaultManager fileExistsAtPath:strPathName]) {
             [NSFileManager.defaultManager removeItemAtPath:strPathName error:nil];
         }
-        
-        //압축할 파일Path및 폴더지정
-        NSMutableArray *listZipFileList = [NSMutableArray arrayWithCapacity:1];
-        [listZipFileList addObject:[documentDirectory stringByAppendingPathComponent:@"Logs"]];
-        
-        if ([SSZipArchive createZipFileAtPath:strPathName withFilesAtPaths:listZipFileList]) {
+                
+        if ([SSZipArchive createZipFileAtPath:strPathName withContentsOfDirectory:[documentDirectory stringByAppendingPathComponent:@"Logs"]]) {
             NSLog(@"압축성공!! %@", strPathName);
         }
     } @catch (NSException *e) {
         NSLog(@"%@", e);
     }
-    
 }
 @end
 

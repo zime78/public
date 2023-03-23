@@ -10,6 +10,10 @@
 		2D02AB8F29BF327C00D8DFFD /* CommandStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D02AB8E29BF327C00D8DFFD /* CommandStatus.swift */; };
 		2D02AB9029BF327C00D8DFFD /* CommandStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D02AB8E29BF327C00D8DFFD /* CommandStatus.swift */; };
 		2D02AB9629BF3C0500D8DFFD /* watchos Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2D78698B29BA00D700951F2F /* watchos Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2D22C5B929C9934500A7CF4F /* FileTransferObservers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D22C5B829C9934500A7CF4F /* FileTransferObservers.swift */; };
+		2D22C5BA29C9934500A7CF4F /* FileTransferObservers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D22C5B829C9934500A7CF4F /* FileTransferObservers.swift */; };
+		2D22C5BC29C9942B00A7CF4F /* FileTransferManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D22C5BB29C9942B00A7CF4F /* FileTransferManager.swift */; };
+		2D22C5BD29C9942B00A7CF4F /* FileTransferManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D22C5BB29C9942B00A7CF4F /* FileTransferManager.swift */; };
 		2D47550629C1F4D700CD641E /* MessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D47550529C1F4D700CD641E /* MessageManager.swift */; };
 		2D47550729C1F4D700CD641E /* MessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D47550529C1F4D700CD641E /* MessageManager.swift */; };
 		2D4C768729B9FA93007560B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4C768629B9FA93007560B7 /* AppDelegate.m */; };
@@ -108,6 +112,8 @@
 
 /* Begin PBXFileReference section */
 		2D02AB8E29BF327C00D8DFFD /* CommandStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandStatus.swift; sourceTree = "<group>"; };
+		2D22C5B829C9934500A7CF4F /* FileTransferObservers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTransferObservers.swift; sourceTree = "<group>"; };
+		2D22C5BB29C9942B00A7CF4F /* FileTransferManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTransferManager.swift; sourceTree = "<group>"; };
 		2D47550529C1F4D700CD641E /* MessageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageManager.swift; sourceTree = "<group>"; };
 		2D4C768229B9FA93007560B7 /* watchTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watchTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D4C768529B9FA93007560B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -502,8 +508,10 @@
 				2DE5934129C7387F00779D07 /* ObjectC */,
 				2DF2DBC129BDBA4F0038CED8 /* Logger.swift */,
 				2D02AB8E29BF327C00D8DFFD /* CommandStatus.swift */,
+				2D22C5B829C9934500A7CF4F /* FileTransferObservers.swift */,
 				2DF2DBC429BDBB700038CED8 /* SessionDelegator.swift */,
 				2D47550529C1F4D700CD641E /* MessageManager.swift */,
+				2D22C5BB29C9942B00A7CF4F /* FileTransferManager.swift */,
 				2DE5935B29C751DD00779D07 /* UiControll.swift */,
 			);
 			path = Shared;
@@ -632,6 +640,7 @@
 				2DE5935129C738D700779D07 /* hmac.c in Sources */,
 				2DE5935229C738E700779D07 /* SSZipArchive.m in Sources */,
 				2DE5934929C738D700779D07 /* pwd2key.c in Sources */,
+				2D22C5BC29C9942B00A7CF4F /* FileTransferManager.swift in Sources */,
 				2DE5934429C738B300779D07 /* ioapi_buf.c in Sources */,
 				2DE5934229C738B300779D07 /* ioapi_mem.c in Sources */,
 				2DF2DBC229BDBA4F0038CED8 /* Logger.swift in Sources */,
@@ -647,6 +656,7 @@
 				2DE5934E29C738D700779D07 /* fileenc.c in Sources */,
 				2D02AB8F29BF327C00D8DFFD /* CommandStatus.swift in Sources */,
 				2DE5934C29C738D700779D07 /* sha1.c in Sources */,
+				2D22C5B929C9934500A7CF4F /* FileTransferObservers.swift in Sources */,
 				2D4C769829B9FA97007560B7 /* main.m in Sources */,
 				2DE5934529C738B300779D07 /* zip.c in Sources */,
 				2D47550629C1F4D700CD641E /* MessageManager.swift in Sources */,
@@ -674,6 +684,7 @@
 				2DE5933529C71FE000779D07 /* ioapi_mem.c in Sources */,
 				2DE5939D29C75A0000779D07 /* UIProgressView.m in Sources */,
 				2DE5935529C7479E00779D07 /* Utils.m in Sources */,
+				2D22C5BD29C9942B00A7CF4F /* FileTransferManager.swift in Sources */,
 				2DE5935D29C751DD00779D07 /* UiControll.swift in Sources */,
 				2DE5933229C71FE000779D07 /* zip.c in Sources */,
 				2DE5933029C71FE000779D07 /* crypt.c in Sources */,
@@ -691,6 +702,7 @@
 				2DE5933A29C71FE000779D07 /* fileenc.c in Sources */,
 				2DF2DBC629BDBB700038CED8 /* SessionDelegator.swift in Sources */,
 				2D78699029BA00D700951F2F /* ContentView.swift in Sources */,
+				2D22C5BA29C9934500A7CF4F /* FileTransferObservers.swift in Sources */,
 				2DE5933329C71FE000779D07 /* ioapi.c in Sources */,
 				2DE5934029C71FE000779D07 /* SSZipArchive.m in Sources */,
 				2DF2DBC329BDBA540038CED8 /* Logger.swift in Sources */,

@@ -190,7 +190,8 @@ class SessionDelegator: NSObject, WCSessionDelegate {
     // MARK: -
     // MARK: Managing File Transfers
     // MARK: -
-    // Did receive a file.
+    
+    // 파일을 받음.
     //
     func session(_ session: WCSession, didReceive file: WCSessionFile) {
         var commandStatus = CommandStatus(command: .transferFile, phrase: .received)
@@ -201,10 +202,24 @@ class SessionDelegator: NSObject, WCSessionDelegate {
         // so dispatch to main queue synchronously instead of calling
         // postNotificationOnMainQueue(name: .dataDidFlow, userInfo: userInfo).
         //
-        DispatchQueue.main.sync {
-            NotificationCenter.default.post(name: .dataDidFlow, object: commandStatus)
+        
+        
+        // 수신한 파일이 저장될 URL 경로 설정
+        let documentsURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+        let fileURL = documentsURL.appendingPathComponent(file.fileURL.lastPathComponent)
+        
+        // 수신한 파일을 저장
+        do {
+            try FileManager.default.moveItem(at: file.fileURL, to: fileURL)
+            print("Received file: \(fileURL)")
+        } catch {
+            print("Error saving file: \(error.localizedDescription)")
         }
+        
+        postNotificationOnMainQueueAsync(name: .dataDidFlow, object: commandStatus)
+
     }
+    
     // Did finish a file transfer.
     //
     func session(_ session: WCSession, didFinish fileTransfer: WCSessionFileTransfer, error: Error?) {
