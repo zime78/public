@@ -12,6 +12,7 @@ import WatchConnectivity
 struct PayloadKey {
     static let timeStamp                 = "timeStamp"
     static let message                   = "message"
+    static let log                       = "log"
     static let isCurrentComplicationInfo = "isCurrentComplicationInfo"
 }
 

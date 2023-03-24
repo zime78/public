@@ -99,15 +99,25 @@ class SessionDelegator: NSObject, WCSessionDelegate {
     // Did receive a message, and the peer doesn't need a response.
     //
     func session(_ session: WCSession, didReceiveMessage message: [String: Any]) {
-        var commandStatus = CommandStatus(command: .sendMessage, phrase: .received)
-        commandStatus.info = MessageInfo(message)
-        postNotificationOnMainQueueAsync(name: .dataDidFlow, object: commandStatus)
         
-        // 수신한 메시지 확인.
-//        let receivedMessage = message["message"] as? String ?? "No message received"
-//        let receivedTime = message["timeStamp"] as? String ?? "No Time received"
-        //TODO: 옵셔널 풀어야됨.
-        print("Received message: \(String(describing: commandStatus.info?.getMessage())) ::(\(String(describing: commandStatus.info?.getTimeStamp())))")
+        if let logData = message[PayloadKey.log] as? Data {
+            //Print는 콘솔 로그에 안찍힘
+            print("[LOG] [wath -> phone]>> \(String(data: logData, encoding: .utf8) ?? " ")" )
+            
+            //콘솔 로그는 NSLog로해야 표시됨
+            NSLog("[LOG] [wath -> phone]>> %@", String(data: logData, encoding: .utf8) ?? " ")
+        }else {
+            var commandStatus = CommandStatus(command: .sendMessage, phrase: .received)
+            commandStatus.info = MessageInfo(message)
+            postNotificationOnMainQueueAsync(name: .dataDidFlow, object: commandStatus)
+            
+            // 수신한 메시지 확인.
+    //        let receivedMessage = message["message"] as? String ?? "No message received"
+    //        let receivedTime = message["timeStamp"] as? String ?? "No Time received"
+            //옵셔널 풀어야됨.
+            //print("Received message: \(String(describing: commandStatus.info?.getMessage())) ::(\(String(describing: commandStatus.info?.getTimeStamp())))")
+
+        }
         
         // 응답 메시지 작성
 //        let replyMessage = ["replyKey": "Message received"]

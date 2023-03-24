@@ -119,14 +119,14 @@ class Logger: NSObject {
         let timeStamp = timeStampFormatter.string(from: Date())
         let timedLine = timeStamp + ": " + line + "\n"
         
-        print(line)
+//        print(line)
         
         if let data = timedLine.data(using: .utf8) {
             performBlockAndWait {
                 self.fileHandle.seekToEndOfFile()
                 self.fileHandle.write(data)
             }
-        }
+        }        
     }
     
     // Read the file content and return it as a string.

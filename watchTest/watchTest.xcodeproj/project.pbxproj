@@ -305,6 +305,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2D87001329CD6D2C00EFC8CA /* File */ = {
+			isa = PBXGroup;
+			children = (
+				2D22C5B829C9934500A7CF4F /* FileTransferObservers.swift */,
+				2D22C5BB29C9942B00A7CF4F /* FileTransferManager.swift */,
+			);
+			path = File;
+			sourceTree = "<group>";
+		};
+		2D87001429CD6D4100EFC8CA /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				2D47550529C1F4D700CD641E /* MessageManager.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		2D87001529CD6D6800EFC8CA /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				2DF2DBC129BDBA4F0038CED8 /* Logger.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
 		2DE5930729C71FE000779D07 /* ZipArchive */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +394,9 @@
 		2DE5934129C7387F00779D07 /* ObjectC */ = {
 			isa = PBXGroup;
 			children = (
+				2D87001529CD6D6800EFC8CA /* Log */,
+				2D87001429CD6D4100EFC8CA /* Message */,
+				2D87001329CD6D2C00EFC8CA /* File */,
 				2DE5930729C71FE000779D07 /* ZipArchive */,
 			);
 			path = ObjectC;
@@ -378,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				2DE5938329C75A0000779D07 /* SouceHeader.h */,
+				2DE5937429C75A0000779D07 /* UIView */,
 				2DE5935F29C75A0000779D07 /* UIActivityIndicatorView */,
 				2DE5937129C75A0000779D07 /* UIAlertView */,
 				2DE5936B29C75A0000779D07 /* UIApplication */,
@@ -388,7 +417,6 @@
 				2DE5938029C75A0000779D07 /* UIProgressView */,
 				2DE5936529C75A0000779D07 /* UIRefreshControl */,
 				2DE5936229C75A0000779D07 /* UIScreen */,
-				2DE5937429C75A0000779D07 /* UIView */,
 				2DE5937D29C75A0000779D07 /* UIViewController */,
 			);
 			path = expansion;
@@ -506,12 +534,8 @@
 			isa = PBXGroup;
 			children = (
 				2DE5934129C7387F00779D07 /* ObjectC */,
-				2DF2DBC129BDBA4F0038CED8 /* Logger.swift */,
 				2D02AB8E29BF327C00D8DFFD /* CommandStatus.swift */,
-				2D22C5B829C9934500A7CF4F /* FileTransferObservers.swift */,
 				2DF2DBC429BDBB700038CED8 /* SessionDelegator.swift */,
-				2D47550529C1F4D700CD641E /* MessageManager.swift */,
-				2D22C5BB29C9942B00A7CF4F /* FileTransferManager.swift */,
 				2DE5935B29C751DD00779D07 /* UiControll.swift */,
 			);
 			path = Shared;

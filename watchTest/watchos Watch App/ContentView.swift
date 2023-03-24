@@ -22,35 +22,35 @@ struct ContentView: View {
             
             ScrollView {
                 Button(action: {
-                    ExpansionObj.testLog("압축버튼 클릭")
+                    ExpansionObj.testLog("[watch]압축버튼 클릭")
                     ExpansionObj.onTestZip()
                 }, label: {
                     Text("압축")
                 })
                 
                 Button(action: {
-                    ExpansionObj.testLog("메시지 전송클릭")
+                    ExpansionObj.testLog("[watch]메시지 전송클릭")
                     //phone와watch 같이 사용하는 함수 이용해서 메시지 전달함
                     ExpansionObj.testMessage("object-c로 메시지보내기")
                 }, label: {
-                    Text("메시지 보내기")
+                    Text("obj 메시지")
                 })
                 
                 Button(action: {
-                    ExpansionObj.testLog("swift 메시지 전송클릭")
+                    ExpansionObj.testLog("[watch]swift 메시지 전송클릭")
                     //phone와watch 같이 사용하는 함수 이용해서 메시지 전달함
                     MessageManager.shared.onTestMessage(msg: "watch test swift message")
                 }, label: {
-                    Text("swift로 메시지보내기")
+                    Text("swift 메시지")
                 })
                 
                 Button(action: {
-                    ExpansionObj.testLog("swift File보냄.")
-                    //phone와watch 같이 사용하는 함수 이용해서 메시지 전달함
-                    FileTransferManager.shared.onTest()
+                    ExpansionObj.testLog("[watch]Log파일 보냄.")
+                    //watch -> phone
+                    FileTransferManager.shared.onSendWatchLogFile()
                     
                 }, label: {
-                    Text("swift로 File보내기")
+                    Text("log File보내기")
                 })
             }.background(Color.orange)
                         
@@ -67,7 +67,6 @@ struct ContentView: View {
                 infoMsg = "err object change"
             }
                 
-
             print("My event received!")
         }
         .onAppear(){

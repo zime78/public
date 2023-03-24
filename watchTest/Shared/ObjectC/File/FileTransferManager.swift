@@ -70,7 +70,7 @@ class FileTransferManager: NSObject {
     
     //테스트로 저장된 로그 파일 폰으로 전송함.
     @objc
-    func onTest(){
+    func onSendWatchLogFile(){
         let zipFileName = zipFileName
         
         let rootURL: URL = folderURL
@@ -85,7 +85,7 @@ class FileTransferManager: NSObject {
         }
         print("fileURL: \(fileURL)")
         
-        //1.파일 압축함.
+        //1.파일 압축함.(워치내 로그파일폴더를 통채로압축함)
 #if os(watchOS)
         //공용함수내 워치에 있는 class이므로 define으로 처리함(해제시 컴파일 오류 발생됨)
         ExpansionObj.onCompressLogZip(zipFileName)

@@ -10,10 +10,13 @@
 #import "Utils.h"
 #include "Command.h"
 
-#if TARGET_OS_IOS
-#import <UIKit/UIKit.h>
+//테스트용
+#if TARGET_OS_WATCH
+    #import "UIView.h"
+#else
+    #import <UIKit/UIKit.h>
 #endif
-#import "UIView.h"
+
 
 #import "watchos_Watch_App-Swift.h"
 
@@ -23,18 +26,31 @@
 +(void)testLog:(NSString *)log
 {
     [Logger.shared appendWithLine:log];
+ 
+    //c 코드 동작확인
     commandLog();
+    
+    //object-c 코드 동작체크
     [Utils onLog];
+    
+    //watch -> phone 로그 전송
+    [MessageManager.shared onDebugLog:log];
+
+    NSLog(@"[LOG] %@",log);
 }
 
 //swift 에서 Object함수 호출 -> swift함수로 phone으로 Message전송
 +(void)testMessage:(NSString *)msg
 {
     [MessageManager.shared onTestMessageWithMsg:msg];
+    
+    //c 코드 동작확인
     commandLog();
+    
+    //object-c 코드 동작체크
     [Utils onLog];
     
-    //실제 동작은 안되는 뷰 호출함(컴파일 오류를 막기위해서 사용.
+    //실제 동작은 안되는코드(컴파일 오류 체크용)
     UIView *testView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
 }
 

@@ -20,6 +20,7 @@
     // Do any additional setup after loading the view.
     
     [Logger.shared appendWithLine:@"viewDidLoad()"];
+    NSLog(@"[LOG] %@",@"viewDidLoad()");
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -53,13 +54,14 @@
         NSString *string = [[NSString alloc] initWithData:[objDic objectForKey:@"message"] encoding:NSUTF8StringEncoding];
         [self.mInfoMessage setText:string];
         
-        NSLog(@"Message: %@", string);
+        NSLog(@"[LOG] Message:%@",string);
     }
 }
 
 - (IBAction)onSendMessage:(id)sender {
     
     [MessageManager.shared onTestMessageWithMsg:@"phone Test message"];
+    NSLog(@"[LOG] %@",@"phone Test message");
 }
 
 
